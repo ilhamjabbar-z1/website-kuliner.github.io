@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Jabbar - Nasi Goreng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        // Cek status login
+        document.addEventListener("DOMContentLoaded", function () {
+            const authButtons = document.querySelector(".auth-buttons");
+            const welcomeMessage = document.getElementById("welcome-message");
+            const isLoggedIn = localStorage.getItem("isLoggedIn");
+            const username = localStorage.getItem("username");
+
+            if (isLoggedIn === "true") {
+                // Jika pengguna sudah login
+                authButtons.style.display = "none"; // Sembunyikan tombol login dan sign-up
+                welcomeMessage.textContent = `Selamat datang, ${username}!`;
+                welcomeMessage.style.display = "block"; // Tampilkan pesan selamat datang
+            } else {
+                // Jika pengguna belum login
+                authButtons.style.display = "flex"; // Tampilkan tombol login dan sign-up
+                welcomeMessage.style.display = "none"; // Sembunyikan pesan selamat datang
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="search-container">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a href="about.html"><i class="bi bi-info-circle"></i> About Us</a>
+            <a href="kontak.html"><i class="bi bi-person-lines-fill"></i> Kontak</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="sigin.html" class="button sign-in">Sign In</a>
+            <a href="login.html" class="button login">Login</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="img/banner.svg" alt="Featured Nasi Goreng" class="featured-dish">
+        </div>
+    </section>
+    
+    <section class="gallery">
+        <h2>Gallery Kuliner Nasi Goreng</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="img/image 1.svg" alt="Nasi Goreng Mawut">
+                <h3>Nasi Goreng Mawut</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="img/image 2.svg" alt="Nasi Goreng Jawa">
+                <h3>Nasi Goreng Jawa</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="img/image 3.svg" alt="Nasi Goreng Seafood">
+                <h3>Nasi Goreng Seafood</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="special-offers">
+        <h2>Promo Spesial</h2>
+        <div class="offers-container">
+            <div class="offer-card">
+                <img src="img/imgp/Nasi goreng 4 porsi.jpg" alt="Promo Paket Keluarga">
+                <div class="offer-content">
+                    <h3>Paket Keluarga</h3>
+                    <p>4 porsi Nasi Goreng pilihan</p>
+                    <span class="price">Rp 100,000</span>
+                    <button class="order-btn">Pesan</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="img/imgp/Nasi goreng paket kumplit.jpg" alt="Promo Makan Siang">
+                <div class="offer-content">
+                    <h3>Promo Makan Siang</h3>
+                    <p>Nasi Goreng paket kumplit</p>
+                    <span class="price">Rp 30,000</span>
+                    <button class="order-btn">Pesan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Location Section -->
+            <section class="locations">
+            <h2>Lokasi Kami</h2>
+            <div class="locations-container">
+                <div class="location-card">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <h3>Cabang Utama</h3>
+                    <p>Sumarecon Mall Bekasi</p>
+                    <p>Buka: 10.00 - 22.00</p>
+                    <button class="direction-btn">Petunjuk Arah</button>
+                </div>
+                <div class="location-card">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <h3>Cabang ke Dua</h3>
+                    <p>Grand Duta City</p>
+                    <p>Buka: 10.00 - 22.00</p>
+                    <button class="direction-btn">Petunjuk Arah</button>
+                </div>
+            </div>
+        </section>
+
+    <div class="shop-title">
+        <h1>Nasi Goreng Varian</h1>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="img/imgs/image 3 (1).svg" alt="Nasi Goreng Seafood" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Seafood</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 30,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 2 (1).svg" alt="Nasi Goreng Jawa" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Jawa</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                </div>
+                <div class="product-price">Rp 25,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 1.svg" alt="Nasi Goreng Mawut" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Mawut</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 35,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 4.svg" alt="Nasi Goreng Ayam Suir" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Ayam Suir</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 27,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 7.svg" alt="Nasi Goreng Ijo" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Ijo</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 23,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 6.svg" alt="Nasi Goreng Penyek" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Penyek</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 34,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 8.svg" alt="Nasi Goreng Cornet Beef" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Cornet Beef</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 38,000</div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="img/imgs/image 9.svg" alt="Nasi Goreng Telur Dadar" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Nasi Goreng Telur Dadar</h3>
+                <div class="rating">
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star filled"></span>
+                    <span class="star empty"></span>
+                </div>
+                <div class="product-price">Rp 30,000</div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Dapatkan Info Promo Terbaru</h2>
+                <p>Berlangganan newsletter kami untuk mendapatkan update menu dan promo spesial</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Masukkan email Anda">
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </section>    
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Tentang Kami</h3>
+                        <p>Kuliner Jabbar menghadirkan cita rasa nasi goreng autentik Indonesia sejak 2023.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Kontak</h3>
+                        <p>Email: info@kulinerjabbar.com</p>
+                        <p>Telp: (022) 123-4567</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Ikuti Kami</h3>
+                        <div class="social-media">
+                            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2024 Jabbar Company. All Rights Reserved.</p>
+            </div>
+        </footer>
+</body>
+</html>
