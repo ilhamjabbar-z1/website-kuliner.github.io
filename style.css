@@ -334,8 +334,9 @@ h1{
 /* Newsletter Section */
 .newsletter {
     background-color: #c4bd97;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
     text-align: center;
+    
 }
 
 .newsletter-content {
@@ -356,7 +357,7 @@ h1{
 
 .newsletter-form input {
     flex: 1;
-    padding: 0.8rem;
+    padding: 0.2rem;
     border: none;
     border-radius: 25px;
     outline: none;
